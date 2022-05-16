@@ -3,7 +3,6 @@ defmodule Exmeal do
   alias Exmeal.Meals.Delete, as: DeleteMeal
   alias Exmeal.Meals.Get, as: GetMeal
   alias Exmeal.Meals.Update, as: UpdateMeal
-
   alias Exmeal.Users.Create, as: CreateUser
   alias Exmeal.Users.Delete, as: DeleteUser
   alias Exmeal.Users.Get, as: GetUser

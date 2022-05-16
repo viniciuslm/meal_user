@@ -1,14 +1,14 @@
-defmodule Exmeal.Meals.Create do
-  alias Exmeal.{Error, Repo, Meal}
+defmodule Exmeal.Users.Create do
+  alias Exmeal.{Error, Repo, User}
 
   def call(params) do
     params
-    |> Meal.changeset()
+    |> User.changeset()
     |> Repo.insert()
     |> handle_insert
   end
 
-  defp handle_insert({:ok, %Meal{}} = result), do: result
+  defp handle_insert({:ok, %User{}} = result), do: result
 
   defp handle_insert({:error, result}) do
     {:error, Error.build(:bad_request, result)}
